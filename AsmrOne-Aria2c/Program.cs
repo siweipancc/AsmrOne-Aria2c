@@ -284,7 +284,8 @@ internal partial class Program
                 }
                 else
                 {
-                    var fullFilePath = Path.Join(parentPath, node.Title);
+                    var sanitizeFileName = SanitizeFileName(node.Title);
+                    var fullFilePath = Path.Join(parentPath, sanitizeFileName);
                     var fileInfo = FileSystem.GetFileInfo(fullFilePath);
                     if (fileInfo.Exists && fileInfo.Length == node.Size)
                     {
@@ -305,7 +306,7 @@ internal partial class Program
                         new Dictionary<string, object>
                         {
                             { "dir", parentPath },
-                            { "out", node.Title }
+                            { "out", sanitizeFileName }
                         }, 0, ctt);
                     Log.InfoFormat("文件即将下载到: {0}", fullFilePath);
                     Log.InfoFormat("Aria2 返回 {0}", response);
