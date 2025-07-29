@@ -1,0 +1,13 @@
+﻿{
+  "proxy": {
+    "url": "http://127.0.0.1:20808",
+    "enable": true
+  },
+  "baseAddress": "https://api.asmr-200.com",
+  "aria2": {
+    "url": "http://localhost:6800/jsonrpc",
+    "password": "qwer1234"
+  },
+  "downloadTracks": true,
+  "fallbackTrackHost": "raw.kiko-play-niptan.one"
+}

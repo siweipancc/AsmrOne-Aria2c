@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>AsmrOne_Aria2c</RootNamespace>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <ApplicationIcon>Resources\金毛.ico</ApplicationIcon>
+        <DebugType>portable</DebugType>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Aria2.NET" Version="1.0.6" />
+        <PackageReference Include="log4net" Version="3.1.0" />
+        <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.5" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <Content Include="config.json;log4net.config">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Update="config.json;log4net.config">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>
